@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "camposSemanticos", "camposSemanticos\camposSemanticos.csproj", "{607260D7-9DEE-497F-B90E-D782A98A33FF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{1595B8B8-A15D-448D-B909-8C930D19E9F0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{607260D7-9DEE-497F-B90E-D782A98A33FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{607260D7-9DEE-497F-B90E-D782A98A33FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{607260D7-9DEE-497F-B90E-D782A98A33FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{607260D7-9DEE-497F-B90E-D782A98A33FF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E3FBE6F7-C2D6-49D7-8DD2-D025B81008AE}
+	EndGlobalSection
+EndGlobal

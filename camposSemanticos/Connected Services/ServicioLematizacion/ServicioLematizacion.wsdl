@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="ServicioLematizacion" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpsBinding_IServicioLematizacion_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="https://appstip.iatext.ulpgc.es/ServicioLematizacionWCF/ServicioLematizacion.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="https://appstip.iatext.ulpgc.es/ServicioLematizacionWCF/ServicioLematizacion.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://appstip.iatext.ulpgc.es/ServicioLematizacionWCF/ServicioLematizacion.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ServicioLematizacionWCF" />
+      <xsd:import schemaLocation="https://appstip.iatext.ulpgc.es/ServicioLematizacionWCF/ServicioLematizacion.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="https://appstip.iatext.ulpgc.es/ServicioLematizacionWCF/ServicioLematizacion.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServicioLematizacion_EsVerbo_InputMessage">
+    <wsdl:part name="parameters" element="tns:EsVerbo" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLematizacion_EsVerbo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EsVerboResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLematizacion_Reconocer_InputMessage">
+    <wsdl:part name="parameters" element="tns:Reconocer" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLematizacion_Reconocer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReconocerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLematizacion_ReconocerTextoPorFrases_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReconocerTextoPorFrases" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLematizacion_ReconocerTextoPorFrases_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReconocerTextoPorFrasesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLematizacion_ReconocerLinguakit_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReconocerLinguakit" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLematizacion_ReconocerLinguakit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReconocerLinguakitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLematizacion_ReconocerFrases_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReconocerFrases" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLematizacion_ReconocerFrases_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReconocerFrasesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLematizacion_ReconocerFlexible_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReconocerFlexible" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLematizacion_ReconocerFlexible_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReconocerFlexibleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLematizacion_ReconocerVerbo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReconocerVerbo" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLematizacion_ReconocerVerbo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReconocerVerboResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLematizacion_ConsultaCanonica_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaCanonica" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLematizacion_ConsultaCanonica_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaCanonicaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLematizacion_ConsultaPalabra_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaPalabra" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLematizacion_ConsultaPalabra_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaPalabraResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLematizacion_PalabrasNoEncontradas_InputMessage">
+    <wsdl:part name="parameters" element="tns:PalabrasNoEncontradas" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLematizacion_PalabrasNoEncontradas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PalabrasNoEncontradasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLematizacion_ConsultaFlexionador_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaFlexionador" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLematizacion_ConsultaFlexionador_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaFlexionadorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLematizacion_ConsultaVerbo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaVerbo" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLematizacion_ConsultaVerbo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaVerboResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLematizacion_ConsultaPrimitiva_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaPrimitiva" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLematizacion_ConsultaPrimitiva_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaPrimitivaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLematizacion_ConsultaPrefijo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaPrefijo" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLematizacion_ConsultaPrefijo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaPrefijoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLematizacion_ConsultaPrefijoCod_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaPrefijoCod" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLematizacion_ConsultaPrefijoCod_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaPrefijoCodResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLematizacion_ConsultaFlexion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaFlexion" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLematizacion_ConsultaFlexion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaFlexionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLematizacion_ConsultaCategoria_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaCategoria" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLematizacion_ConsultaCategoria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaCategoriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLematizacion_ConsultaCodigosFlexiones_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaCodigosFlexiones" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLematizacion_ConsultaCodigosFlexiones_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaCodigosFlexionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLematizacion_ConsultaCodigosCategorias_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaCodigosCategorias" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLematizacion_ConsultaCodigosCategorias_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaCodigosCategoriasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLematizacion_PosTaggerTip_InputMessage">
+    <wsdl:part name="parameters" element="tns:PosTaggerTip" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLematizacion_PosTaggerTip_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PosTaggerTipResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServicioLematizacion">
+    <wsdl:operation name="EsVerbo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLematizacion/EsVerbo" message="tns:IServicioLematizacion_EsVerbo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLematizacion/EsVerboResponse" message="tns:IServicioLematizacion_EsVerbo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Reconocer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLematizacion/Reconocer" message="tns:IServicioLematizacion_Reconocer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLematizacion/ReconocerResponse" message="tns:IServicioLematizacion_Reconocer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReconocerTextoPorFrases">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLematizacion/ReconocerTextoPorFrases" message="tns:IServicioLematizacion_ReconocerTextoPorFrases_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLematizacion/ReconocerTextoPorFrasesResponse" message="tns:IServicioLematizacion_ReconocerTextoPorFrases_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReconocerLinguakit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLematizacion/ReconocerLinguakit" message="tns:IServicioLematizacion_ReconocerLinguakit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLematizacion/ReconocerLinguakitResponse" message="tns:IServicioLematizacion_ReconocerLinguakit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReconocerFrases">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLematizacion/ReconocerFrases" message="tns:IServicioLematizacion_ReconocerFrases_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLematizacion/ReconocerFrasesResponse" message="tns:IServicioLematizacion_ReconocerFrases_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReconocerFlexible">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLematizacion/ReconocerFlexible" message="tns:IServicioLematizacion_ReconocerFlexible_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLematizacion/ReconocerFlexibleResponse" message="tns:IServicioLematizacion_ReconocerFlexible_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReconocerVerbo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLematizacion/ReconocerVerbo" message="tns:IServicioLematizacion_ReconocerVerbo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLematizacion/ReconocerVerboResponse" message="tns:IServicioLematizacion_ReconocerVerbo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaCanonica">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLematizacion/ConsultaCanonica" message="tns:IServicioLematizacion_ConsultaCanonica_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLematizacion/ConsultaCanonicaResponse" message="tns:IServicioLematizacion_ConsultaCanonica_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaPalabra">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLematizacion/ConsultaPalabra" message="tns:IServicioLematizacion_ConsultaPalabra_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLematizacion/ConsultaPalabraResponse" message="tns:IServicioLematizacion_ConsultaPalabra_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PalabrasNoEncontradas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLematizacion/PalabrasNoEncontradas" message="tns:IServicioLematizacion_PalabrasNoEncontradas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLematizacion/PalabrasNoEncontradasResponse" message="tns:IServicioLematizacion_PalabrasNoEncontradas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaFlexionador">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLematizacion/ConsultaFlexionador" message="tns:IServicioLematizacion_ConsultaFlexionador_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLematizacion/ConsultaFlexionadorResponse" message="tns:IServicioLematizacion_ConsultaFlexionador_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaVerbo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLematizacion/ConsultaVerbo" message="tns:IServicioLematizacion_ConsultaVerbo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLematizacion/ConsultaVerboResponse" message="tns:IServicioLematizacion_ConsultaVerbo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaPrimitiva">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLematizacion/ConsultaPrimitiva" message="tns:IServicioLematizacion_ConsultaPrimitiva_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLematizacion/ConsultaPrimitivaResponse" message="tns:IServicioLematizacion_ConsultaPrimitiva_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaPrefijo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLematizacion/ConsultaPrefijo" message="tns:IServicioLematizacion_ConsultaPrefijo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLematizacion/ConsultaPrefijoResponse" message="tns:IServicioLematizacion_ConsultaPrefijo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaPrefijoCod">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLematizacion/ConsultaPrefijoCod" message="tns:IServicioLematizacion_ConsultaPrefijoCod_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLematizacion/ConsultaPrefijoCodResponse" message="tns:IServicioLematizacion_ConsultaPrefijoCod_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaFlexion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLematizacion/ConsultaFlexion" message="tns:IServicioLematizacion_ConsultaFlexion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLematizacion/ConsultaFlexionResponse" message="tns:IServicioLematizacion_ConsultaFlexion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaCategoria">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLematizacion/ConsultaCategoria" message="tns:IServicioLematizacion_ConsultaCategoria_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLematizacion/ConsultaCategoriaResponse" message="tns:IServicioLematizacion_ConsultaCategoria_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaCodigosFlexiones">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLematizacion/ConsultaCodigosFlexiones" message="tns:IServicioLematizacion_ConsultaCodigosFlexiones_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLematizacion/ConsultaCodigosFlexionesResponse" message="tns:IServicioLematizacion_ConsultaCodigosFlexiones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaCodigosCategorias">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLematizacion/ConsultaCodigosCategorias" message="tns:IServicioLematizacion_ConsultaCodigosCategorias_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLematizacion/ConsultaCodigosCategoriasResponse" message="tns:IServicioLematizacion_ConsultaCodigosCategorias_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PosTaggerTip">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLematizacion/PosTaggerTip" message="tns:IServicioLematizacion_PosTaggerTip_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLematizacion/PosTaggerTipResponse" message="tns:IServicioLematizacion_PosTaggerTip_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpsBinding_IServicioLematizacion" type="tns:IServicioLematizacion">
+    <wsp:PolicyReference URI="#BasicHttpsBinding_IServicioLematizacion_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="EsVerbo">
+      <soap:operation soapAction="http://tempuri.org/IServicioLematizacion/EsVerbo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Reconocer">
+      <soap:operation soapAction="http://tempuri.org/IServicioLematizacion/Reconocer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReconocerTextoPorFrases">
+      <soap:operation soapAction="http://tempuri.org/IServicioLematizacion/ReconocerTextoPorFrases" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReconocerLinguakit">
+      <soap:operation soapAction="http://tempuri.org/IServicioLematizacion/ReconocerLinguakit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReconocerFrases">
+      <soap:operation soapAction="http://tempuri.org/IServicioLematizacion/ReconocerFrases" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReconocerFlexible">
+      <soap:operation soapAction="http://tempuri.org/IServicioLematizacion/ReconocerFlexible" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReconocerVerbo">
+      <soap:operation soapAction="http://tempuri.org/IServicioLematizacion/ReconocerVerbo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaCanonica">
+      <soap:operation soapAction="http://tempuri.org/IServicioLematizacion/ConsultaCanonica" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaPalabra">
+      <soap:operation soapAction="http://tempuri.org/IServicioLematizacion/ConsultaPalabra" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PalabrasNoEncontradas">
+      <soap:operation soapAction="http://tempuri.org/IServicioLematizacion/PalabrasNoEncontradas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaFlexionador">
+      <soap:operation soapAction="http://tempuri.org/IServicioLematizacion/ConsultaFlexionador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaVerbo">
+      <soap:operation soapAction="http://tempuri.org/IServicioLematizacion/ConsultaVerbo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaPrimitiva">
+      <soap:operation soapAction="http://tempuri.org/IServicioLematizacion/ConsultaPrimitiva" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaPrefijo">
+      <soap:operation soapAction="http://tempuri.org/IServicioLematizacion/ConsultaPrefijo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaPrefijoCod">
+      <soap:operation soapAction="http://tempuri.org/IServicioLematizacion/ConsultaPrefijoCod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaFlexion">
+      <soap:operation soapAction="http://tempuri.org/IServicioLematizacion/ConsultaFlexion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaCategoria">
+      <soap:operation soapAction="http://tempuri.org/IServicioLematizacion/ConsultaCategoria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaCodigosFlexiones">
+      <soap:operation soapAction="http://tempuri.org/IServicioLematizacion/ConsultaCodigosFlexiones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaCodigosCategorias">
+      <soap:operation soapAction="http://tempuri.org/IServicioLematizacion/ConsultaCodigosCategorias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PosTaggerTip">
+      <soap:operation soapAction="http://tempuri.org/IServicioLematizacion/PosTaggerTip" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicioLematizacion">
+    <wsdl:port name="BasicHttpsBinding_IServicioLematizacion" binding="tns:BasicHttpsBinding_IServicioLematizacion">
+      <soap:address location="https://appstip.iatext.ulpgc.es/ServicioLematizacionWCF/ServicioLematizacion.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

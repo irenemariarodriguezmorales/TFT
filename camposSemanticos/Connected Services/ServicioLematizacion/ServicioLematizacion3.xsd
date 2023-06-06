@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ServicioLematizacionWCF" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ServicioLematizacionWCF" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://appstip.iatext.ulpgc.es/ServicioLematizacionWCF/ServicioLematizacion.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="ArrayOfReconocimiento">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Reconocimiento" nillable="true" type="tns:Reconocimiento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfReconocimiento" nillable="true" type="tns:ArrayOfReconocimiento" />
+  <xs:complexType name="Reconocimiento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FormaCanonica" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Frecuencia" type="xs:int" />
+      <xs:element minOccurs="0" name="IdFlexion" type="xs:int" />
+      <xs:element minOccurs="0" name="IdFormaCanonica" type="xs:int" />
+      <xs:element minOccurs="0" name="InfoCanonica" nillable="true" type="tns:InfoCanonica" />
+      <xs:element minOccurs="0" name="Palabra" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Prefijos" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pronombres" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Reconocimiento" nillable="true" type="tns:Reconocimiento" />
+  <xs:complexType name="InfoCanonica">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Antigua" type="xs:int" />
+      <xs:element minOccurs="0" name="DRAEXXIII" type="xs:int" />
+      <xs:element minOccurs="0" name="FormaCanonica" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Frecuencia" type="xs:int" />
+      <xs:element minOccurs="0" name="IdCategoria" type="xs:int" />
+      <xs:element minOccurs="0" name="IdCategoriaGN" type="xs:int" />
+      <xs:element minOccurs="0" name="IdCategoriaLK" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdFlexion" type="xs:int" />
+      <xs:element minOccurs="0" name="MaxAcepciones" type="xs:int" />
+      <xs:element minOccurs="0" name="MaxEtimologia" type="xs:int" />
+      <xs:element minOccurs="0" name="NumAcepcion" type="xs:int" />
+      <xs:element minOccurs="0" name="NumAcepcionSec" type="xs:int" />
+      <xs:element minOccurs="0" name="NumEtimologia" type="xs:int" />
+      <xs:element minOccurs="0" name="PosAcepcion" type="xs:int" />
+      <xs:element minOccurs="0" name="PosAcepcionSec" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InfoCanonica" nillable="true" type="tns:InfoCanonica" />
+  <xs:complexType name="ArrayOfParamtextFrase">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ParamtextFrase" nillable="true" type="tns:ParamtextFrase" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfParamtextFrase" nillable="true" type="tns:ArrayOfParamtextFrase" />
+  <xs:complexType name="ParamtextFrase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Frase" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Palabras" nillable="true" type="tns:ArrayOfParamtextPalabra" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ParamtextFrase" nillable="true" type="tns:ParamtextFrase" />
+  <xs:complexType name="ArrayOfParamtextPalabra">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ParamtextPalabra" nillable="true" type="tns:ParamtextPalabra" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfParamtextPalabra" nillable="true" type="tns:ArrayOfParamtextPalabra" />
+  <xs:complexType name="ParamtextPalabra">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FormaCanonicaLK" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdCategoriaLK" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdFrase" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdParrafo" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="InfoMorfoMatchingLK" nillable="true" type="q1:ArrayOfint" />
+      <xs:element minOccurs="0" name="InformacionMorfologica" nillable="true" type="tns:ArrayOfReconocimiento" />
+      <xs:element minOccurs="0" name="Palabra" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PalabraLK" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PosMark" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ParamtextPalabra" nillable="true" type="tns:ParamtextPalabra" />
+  <xs:complexType name="ArrayOfInfoUnaFrase">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InfoUnaFrase" nillable="true" type="tns:InfoUnaFrase" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInfoUnaFrase" nillable="true" type="tns:ArrayOfInfoUnaFrase" />
+  <xs:complexType name="InfoUnaFrase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Frase" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Palabras" nillable="true" type="tns:ArrayOfInfoUnaPalabra" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InfoUnaFrase" nillable="true" type="tns:InfoUnaFrase" />
+  <xs:complexType name="ArrayOfInfoUnaPalabra">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InfoUnaPalabra" nillable="true" type="tns:InfoUnaPalabra" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInfoUnaPalabra" nillable="true" type="tns:ArrayOfInfoUnaPalabra" />
+  <xs:complexType name="InfoUnaPalabra">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FormaCanonica" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Frecuencia" type="xs:int" />
+      <xs:element minOccurs="0" name="IdCategoria" type="xs:int" />
+      <xs:element minOccurs="0" name="IdFlexion" type="xs:int" />
+      <xs:element minOccurs="0" name="IdFormaCanonica" type="xs:int" />
+      <xs:element minOccurs="0" name="Palabra" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PosMark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Posicion" type="xs:int" />
+      <xs:element minOccurs="0" name="Prefijos" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pronombres" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InfoUnaPalabra" nillable="true" type="tns:InfoUnaPalabra" />
+  <xs:complexType name="ArrayOfInfoPalabra">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InfoPalabra" nillable="true" type="tns:InfoPalabra" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInfoPalabra" nillable="true" type="tns:ArrayOfInfoPalabra" />
+  <xs:complexType name="InfoPalabra">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Frecuencia" type="xs:int" />
+      <xs:element minOccurs="0" name="IdFlexion" type="xs:int" />
+      <xs:element minOccurs="0" name="IdFormaCanonica" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InfoPalabra" nillable="true" type="tns:InfoPalabra" />
+  <xs:complexType name="ArrayOfInfoFlexionador">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InfoFlexionador" nillable="true" type="tns:InfoFlexionador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInfoFlexionador" nillable="true" type="tns:ArrayOfInfoFlexionador" />
+  <xs:complexType name="InfoFlexionador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdFlexion" type="xs:int" />
+      <xs:element minOccurs="0" name="Palabra" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InfoFlexionador" nillable="true" type="tns:InfoFlexionador" />
+  <xs:complexType name="ArrayOfInfoVerbo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InfoVerbo" nillable="true" type="tns:InfoVerbo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInfoVerbo" nillable="true" type="tns:ArrayOfInfoVerbo" />
+  <xs:complexType name="InfoVerbo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Frecuencia" type="xs:int" />
+      <xs:element minOccurs="0" name="IdFlexion" type="xs:int" />
+      <xs:element minOccurs="0" name="IdFormaCanonica" type="xs:int" />
+      <xs:element minOccurs="0" name="Infinitivo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InfoVerbo" nillable="true" type="tns:InfoVerbo" />
+  <xs:complexType name="ArrayOfInfoPrimitiva">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InfoPrimitiva" nillable="true" type="tns:InfoPrimitiva" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInfoPrimitiva" nillable="true" type="tns:ArrayOfInfoPrimitiva" />
+  <xs:complexType name="InfoPrimitiva">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdCategoria" type="xs:int" />
+      <xs:element minOccurs="0" name="IdCategoriaPadre" type="xs:int" />
+      <xs:element minOccurs="0" name="IdFamilia" type="xs:int" />
+      <xs:element minOccurs="0" name="IdPrefijo" type="xs:int" />
+      <xs:element minOccurs="0" name="IdSufijo" type="xs:int" />
+      <xs:element minOccurs="0" name="Padre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Prefijo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReglaPrefijal" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ReglaSufijal" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Sufijo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InfoPrimitiva" nillable="true" type="tns:InfoPrimitiva" />
+  <xs:complexType name="ArrayOfInfoPrefijo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InfoPrefijo" nillable="true" type="tns:InfoPrefijo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInfoPrefijo" nillable="true" type="tns:ArrayOfInfoPrefijo" />
+  <xs:complexType name="InfoPrefijo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Corte" type="xs:int" />
+      <xs:element minOccurs="0" name="Etimologia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Prefijo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PrefijoCanonico" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Significado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Silabacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoPrefijo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Variantes" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InfoPrefijo" nillable="true" type="tns:InfoPrefijo" />
+  <xs:complexType name="InfoFlexion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FlexionAbrevEn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FlexionAbrevEs" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FlexionEn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FlexionEs" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InfoFlexion" nillable="true" type="tns:InfoFlexion" />
+  <xs:complexType name="InfoCategoria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CategoriaAbrevEn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CategoriaAbrevEs" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CategoriaEn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CategoriaEs" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InfoCategoria" nillable="true" type="tns:InfoCategoria" />
+</xs:schema>

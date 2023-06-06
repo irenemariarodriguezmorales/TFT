@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="65b31b34-1f16-4907-9723-8cd3feb653ad" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://appstip.iatext.ulpgc.es/ServicioLematizacionWCF/ServicioLematizacion.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServicioLematizacion.xsd" MetadataType="Schema" ID="8502c442-4b64-43c1-b95a-f037174bd7af" SourceId="1" SourceUrl="https://appstip.iatext.ulpgc.es/ServicioLematizacionWCF/ServicioLematizacion.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServicioLematizacion1.xsd" MetadataType="Schema" ID="8c5fb455-3e44-4511-b830-62e1dc8b3975" SourceId="1" SourceUrl="https://appstip.iatext.ulpgc.es/ServicioLematizacionWCF/ServicioLematizacion.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServicioLematizacion2.xsd" MetadataType="Schema" ID="9bcefd7e-6cd7-49d8-8399-23a64bb378fd" SourceId="1" SourceUrl="https://appstip.iatext.ulpgc.es/ServicioLematizacionWCF/ServicioLematizacion.svc?xsd=xsd3" />
+    <MetadataFile FileName="ServicioLematizacion3.xsd" MetadataType="Schema" ID="03fb58fd-38b0-4757-a2ed-ae54500e5e68" SourceId="1" SourceUrl="https://appstip.iatext.ulpgc.es/ServicioLematizacionWCF/ServicioLematizacion.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServicioLematizacion4.xsd" MetadataType="Schema" ID="d8b3731a-eeb7-4ac7-8802-9d8617530d6b" SourceId="1" SourceUrl="https://appstip.iatext.ulpgc.es/ServicioLematizacionWCF/ServicioLematizacion.svc?xsd=xsd4" />
+    <MetadataFile FileName="ServicioLematizacion.wsdl" MetadataType="Wsdl" ID="04c824fd-2a8a-483a-a5b9-6ef11fb85497" SourceId="1" SourceUrl="https://appstip.iatext.ulpgc.es/ServicioLematizacionWCF/ServicioLematizacion.svc?wsdl" />
+    <MetadataFile FileName="ServicioLematizacion.disco" MetadataType="Disco" ID="2367a1a7-eb3e-491f-99c4-f5ff5528ff78" SourceId="1" SourceUrl="https://appstip.iatext.ulpgc.es/ServicioLematizacionWCF/ServicioLematizacion.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

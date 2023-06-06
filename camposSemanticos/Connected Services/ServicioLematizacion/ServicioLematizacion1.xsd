@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://appstip.iatext.ulpgc.es/ServicioLematizacionWCF/ServicioLematizacion.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ServicioLematizacionWCF" />
+  <xs:import schemaLocation="https://appstip.iatext.ulpgc.es/ServicioLematizacionWCF/ServicioLematizacion.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="https://appstip.iatext.ulpgc.es/ServicioLematizacionWCF/ServicioLematizacion.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" />
+  <xs:element name="EsVerbo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="verbo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EsVerboResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EsVerboResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Reconocer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="palabra" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idioma" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="multiPref" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReconocerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ServicioLematizacionWCF" minOccurs="0" name="ReconocerResult" nillable="true" type="q1:ArrayOfReconocimiento" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReconocerTextoPorFrases">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ServicioLematizacionWCF" minOccurs="0" name="frases" nillable="true" type="q2:ArrayOfParamtextFrase" />
+        <xs:element minOccurs="0" name="idioma" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="multiPref" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReconocerTextoPorFrasesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ServicioLematizacionWCF" minOccurs="0" name="ReconocerTextoPorFrasesResult" nillable="true" type="q3:ArrayOfParamtextFrase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReconocerLinguakit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ServicioLematizacionWCF" minOccurs="0" name="frases" nillable="true" type="q4:ArrayOfParamtextFrase" />
+        <xs:element minOccurs="0" name="idioma" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="multiPref" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReconocerLinguakitResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ServicioLematizacionWCF" minOccurs="0" name="ReconocerLinguakitResult" nillable="true" type="q5:ArrayOfParamtextFrase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReconocerFrases">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ServicioLematizacionWCF" minOccurs="0" name="frases" nillable="true" type="q6:ArrayOfInfoUnaFrase" />
+        <xs:element minOccurs="0" name="idioma" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="multiPref" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReconocerFrasesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/ServicioLematizacionWCF" minOccurs="0" name="ReconocerFrasesResult" nillable="true" type="q7:ArrayOfInfoUnaFrase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReconocerFlexible">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="palabra" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idioma" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="multiPref" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReconocerFlexibleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/ServicioLematizacionWCF" minOccurs="0" name="ReconocerFlexibleResult" nillable="true" type="q8:ArrayOfReconocimiento" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReconocerVerbo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="verbo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idioma" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="multiPref" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReconocerVerboResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/ServicioLematizacionWCF" minOccurs="0" name="ReconocerVerboResult" nillable="true" type="q9:ArrayOfReconocimiento" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaCanonica">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idFormaCanonica" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaCanonicaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/ServicioLematizacionWCF" minOccurs="0" name="ConsultaCanonicaResult" nillable="true" type="q10:InfoCanonica" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaPalabra">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="palabra" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaPalabraResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/ServicioLematizacionWCF" minOccurs="0" name="ConsultaPalabraResult" nillable="true" type="q11:ArrayOfInfoPalabra" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PalabrasNoEncontradas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="listaPalabras" nillable="true" type="q12:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PalabrasNoEncontradasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="PalabrasNoEncontradasResult" nillable="true" type="q13:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaFlexionador">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idFormaCanonica" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaFlexionadorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/ServicioLematizacionWCF" minOccurs="0" name="ConsultaFlexionadorResult" nillable="true" type="q14:ArrayOfInfoFlexionador" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaVerbo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="verbo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaVerboResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/ServicioLematizacionWCF" minOccurs="0" name="ConsultaVerboResult" nillable="true" type="q15:ArrayOfInfoVerbo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaPrimitiva">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="palabra" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaPrimitivaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/ServicioLematizacionWCF" minOccurs="0" name="ConsultaPrimitivaResult" nillable="true" type="q16:ArrayOfInfoPrimitiva" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaPrefijo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="prefijo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaPrefijoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/ServicioLematizacionWCF" minOccurs="0" name="ConsultaPrefijoResult" nillable="true" type="q17:ArrayOfInfoPrefijo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaPrefijoCod">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idPrefijo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaPrefijoCodResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/ServicioLematizacionWCF" minOccurs="0" name="ConsultaPrefijoCodResult" nillable="true" type="q18:InfoPrefijo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaFlexion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idFlexion" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaFlexionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/ServicioLematizacionWCF" minOccurs="0" name="ConsultaFlexionResult" nillable="true" type="q19:InfoFlexion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaCategoria">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCategoria" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaCategoriaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/ServicioLematizacionWCF" minOccurs="0" name="ConsultaCategoriaResult" nillable="true" type="q20:InfoCategoria" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaCodigosFlexiones">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaCodigosFlexionesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ConsultaCodigosFlexionesResult" nillable="true" type="q21:ArrayOfKeyValueOfintInfoFlexionNEBF8H_SW" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaCodigosCategorias">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaCodigosCategoriasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ConsultaCodigosCategoriasResult" nillable="true" type="q22:ArrayOfKeyValueOfintInfoCategoriaNEBF8H_SW" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PosTaggerTip">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="text" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PosTaggerTipResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/System.Collections.Generic" minOccurs="0" name="PosTaggerTipResult" nillable="true" type="q23:ArrayOfArrayOfKeyValuePairOfstringKeyValuePairOfstringstringtwCi8m_S7" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
